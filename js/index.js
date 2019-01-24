@@ -11,7 +11,7 @@ console.log(url);
       var followers = parseInt(this.Followers);
       var engagement = parseFloat(this["Engagement Rate"]);
       if (engagement > 10) {
-        var entry = '<tr class="selectable eng10 eng5 eng3 eng1 animated fadeIn>';
+        var entry = '<tr class="selectable eng10 eng5 eng3 eng1>';
       }
       else if (engagement > 5) {
         var entry = '<tr class="selectable eng5 eng3 eng1">';
