@@ -1,4 +1,4 @@
-url = "https://influencersargentina.xyz/values.json"
+url = "https://api.sheety.co/1c1a4fd6-5f9d-47ee-94df-fad4d21ca619"
 
 console.log(url);
 
@@ -8,30 +8,48 @@ console.log(url);
     var obj = data;
     $(obj).each(function(){
       // breaking out columns to more easily interpret
-      var followers = parseInt(this.Followers);
-      var engagement = parseFloat(this["Engagement Rate"]);
+      var followers = parseInt(this.followers.replace(',',''));
+      var engagement = parseFloat(this.engagementRate);
+      var classes = "";
+
+
       if (engagement > 10) {
-        var entry = '<tr class="selectable eng10 eng5 eng3 eng1">';
+        classes += 'eng10 eng5 eng3 eng1';
       }
       else if (engagement > 5) {
-        var entry = '<tr class="selectable eng5 eng3 eng1">';
+        classes += 'eng5 eng3 eng1';
       }
       else if (engagement > 3) {
-        var entry = '<tr class="selectable eng3 eng1">';
+        classes += 'eng3 eng1';
       }
       else if (engagement > 1) {
-        var entry = '<tr class="selectable eng1">';
+        classes += 'eng1';
       }
-      else {
-        var entry = '<tr class="selectable">';
+
+      if (followers > 1000000) {
+        classes += ' millon'
       }
-      //$("#filterable tr").not(".eng3").css("display","none");
+      else if (followers > 750000 && followers < 1000000) {
+        classes += ' 750-1000';
+      }
+      else if (followers > 500000 && followers < 750000) {
+        classes += ' 500-750';
+      }
+      else if (followers > 300000 && followers < 500000) {
+        classes += ' 300-500';
+      }
+      else if (followers > 100000 && followers < 300000) {
+        classes += ' 100-300';
+      }
+      else if (followers < 100000) {
+        classes += ' 100';
+      }
 
-
-      entry+= '<td>'+this.Nombre+'</td>';
-      entry+= '<td><a target="_blank" href="'+ this.Cuenta +'">'+'<i class="fas fa-external-link-alt"></i> '+this.Username+'</a></td>';
-      entry+='<td>'+this.Followers+'</td>';
-      entry+='<td>'+this["Engagement Rate"]+'</td>';
+      var entry = '<tr class="selectable '+classes+'">';
+      entry+= '<td>'+this.nombre+'</td>';
+      entry+= '<td><a target="_blank" href="'+ this.cuenta +'">'+'<i class="fas fa-external-link-alt"></i> '+this.username+'</a></td>';
+      entry+='<td>'+this.followers+'</td>';
+      entry+='<td>'+this["engagementRate"]+'</td>';
       entry+='</tr>';
       $('#filterable').append(entry);
    });
