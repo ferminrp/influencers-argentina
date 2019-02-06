@@ -87,16 +87,29 @@
             <!--<label for="inputPassword2" class="sr-only">username</label>-->
             <input type="text" name="username" class="form-control" id="search" placeholder="Search..." />
             <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Engagement Rate
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <p class="dropdown-item" onclick="eng10()">> 10%</p>
-              <p class="dropdown-item" onclick="eng5()">> 5%</p>
-              <p class="dropdown-item" onclick="eng3()">> 3%</p>
-              <p class="dropdown-item" onclick="eng1()">> 1%</p>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Engagement Rate
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <p class="dropdown-item" onclick="eng10()">> 10%</p>
+                    <p class="dropdown-item" onclick="eng5()">> 5%</p>
+                    <p class="dropdown-item" onclick="eng3()">> 3%</p>
+                    <p class="dropdown-item" onclick="eng1()">> 1%</p>
+                </div>
             </div>
-          </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Followers
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <p class="dropdown-item" onclick="mill()">> 1M</p>
+                    <p class="dropdown-item" onclick="up750()">750k - 1M</p>
+                    <p class="dropdown-item" onclick="up500()">500k - 750k</p>
+                    <p class="dropdown-item" onclick="up300()">300k - 500k</p>
+                    <p class="dropdown-item" onclick="up100()">100k - 300k</p>
+                    <p class="dropdown-item" onclick="down100()">< 100k</p>
+                </div>
+            </div>
 
         </form>
 

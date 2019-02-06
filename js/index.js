@@ -8,7 +8,8 @@ console.log(url);
     var obj = data;
     $(obj).each(function(){
       // breaking out columns to more easily interpret
-      var followers = parseInt(this.followers.replace(',',''));
+      var followers = parseInt(this.followers.replace(',','').replace(',',''));
+      console.log(followers);
       var engagement = parseFloat(this.engagementRate);
       var classes = "";
 
@@ -148,4 +149,33 @@ function eng5() {
 function eng10() {
   $("#filterable tr").removeClass("hidden");
   $("#filterable tr").not(".eng10").addClass("hidden");
+}
+
+function mill() {
+  $("#filterable tr").removeClass("hidden");
+  $("#filterable tr").not(".millon").addClass("hidden");
+}
+
+function up750() {
+  $("#filterable tr").removeClass("hidden");
+  $("#filterable tr").not(".750-1000").addClass("hidden");
+}
+
+function up500() {
+  $("#filterable tr").removeClass("hidden");
+  $("#filterable tr").not(".500-750").addClass("hidden");
+}
+
+function up300() {
+  $("#filterable tr").removeClass("hidden");
+  $("#filterable tr").not(".300-500").addClass("hidden");
+}
+
+function up100() {
+  $("#filterable tr").removeClass("hidden");
+  $("#filterable tr").not(".100-300").addClass("hidden");
+}
+function down100() {
+  $("#filterable tr").removeClass("hidden");
+  $("#filterable tr").not(".100").addClass("hidden");
 }
