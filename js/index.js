@@ -185,7 +185,7 @@ var darkMode = false;
 $( "#darkmode" ).click(function() {
   if (darkMode === false) {
     darkMode = true;
-    $("body").css("background-color","black");
+    $("body").css("background-color","#2F3437");
     $("#results-table").css("color","white");
     $("h2").css("color","white");
     $("#darkmode").html('<i class="fas fa-sun"></i>');
