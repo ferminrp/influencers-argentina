@@ -9,7 +9,7 @@ console.log(url);
     $(obj).each(function(){
       // breaking out columns to more easily interpret
       var followers = parseInt(this.followers.replace(',','').replace(',',''));
-      console.log(followers);
+      //console.log(followers);
       var engagement = parseFloat(this.engagementRate);
       var classes = "";
 
