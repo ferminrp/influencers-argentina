@@ -5,6 +5,14 @@
 .jumbotron {
   background:rgba(0,0,0,0.5);
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.jumbotron p {
+  text-shadow: rgba(0,0,0,.35) 1px 1px 1px;
 }
 
 h1 {
