@@ -179,3 +179,23 @@ function down100() {
   $("#filterable tr").removeClass("hidden");
   $("#filterable tr").not(".100").addClass("hidden");
 }
+
+var darkMode = false;
+
+$( "#darkmode" ).click(function() {
+  if (darkMode === false) {
+    darkMode = true;
+    $("body").css("background-color","black");
+    $("#results-table").css("color","white");
+    $("h2").css("color","white");
+    $("#darkmode").html('<i class="fas fa-sun"></i>');
+  }
+  else {
+    darkMode = false;
+    $("body").css("background-color","white");
+    $("#results-table").css("color","black");
+    $("h2").css("color","black");
+    $("#darkmode").html('<i class="fas fa-moon"></i>');
+  }
+
+});

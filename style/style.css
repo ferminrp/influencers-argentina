@@ -79,12 +79,23 @@ margin-top: 30px;
   margin-left: 10px;
 }
 
+#darkmode {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   #dropdownMenuButton {
     margin-left: 0px;
     margin-top: 10px;
     width: 100%;
   }
+  #darkmode {
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
   .dropdown {
     width: 100%;
   }
