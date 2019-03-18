@@ -1,3 +1,5 @@
+alert("Esta página fue abandonada y su información ya no esta actualizada. Última actualización 15/2/2019. Para trabajar con influencers visite www.medialab.lookea.me");
+
 url = "https://api.sheety.co/1c1a4fd6-5f9d-47ee-94df-fad4d21ca619"
 
 console.log(url);
