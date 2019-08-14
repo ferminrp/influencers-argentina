@@ -1,0 +1,135 @@
+body {
+  margin: 0px;
+  font-family:  Avenir,'helvetica neue',helvetica,arial,sans-serif;
+  background-color: #F3F3F3
+}
+
+/* A PARTIR DE ACA NAVBAR */
+
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  height: 70px;
+  z-index: 1;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h6 {
+  font-size: 24px;
+  margin: 0 0 0 10vw;
+}
+
+/* A PARTIR DE ACA CONTENIDO */
+
+.card {
+  background-color: white;
+  border-top: 4px solid #9230E1;
+}
+
+
+/* TARJETA PERSONAL */
+
+#basic-info {
+  display: flex;
+  width: 800px;
+  margin-top: 100px;
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  min-width: 150px;
+  min-height: 150px;
+  background-repeat: no-repeat no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* WIDGETS DE KPIS*/
+
+.kpis {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.kpis p, h2 {
+  text-align: center;
+}
+
+.kpis p {
+  margin: 0px;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+.kpis .card {
+  width: 390px;
+  padding-top: 20px;
+  padding-BOTTOM: 20px;
+}
+
+/* CTA FINAL */
+
+.final {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.5em;
+  margin-bottom: 50px;
+}
+
+#cta {
+  background-color: #9230e1;
+  border: 0 solid transparent;
+  border-radius: 8px;
+  color: #fff;
+  padding: 12px 50px;
+  text-decoration: none;
+  margin-top: 60px;
+}
+
+@media (max-width: 875px) {
+  .kpis .card {
+    width: 90vw;
+  }
+  .engrate {
+    margin-top: 20px;
+  }
+  #basic-info {
+    margin-top: 50px;
+    flex-wrap: wrap;
+    display: block;
+  }
+  #basic-info {
+    text-align: center;
+  }
+  .img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body {
+    padding-bottom: 50px;
+  }
+}
