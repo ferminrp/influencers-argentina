@@ -143,4 +143,7 @@ h3 {
   body {
     padding-bottom: 50px;
   }
+  #cta {
+    margin-bottom: 30px;
+  }
 }
