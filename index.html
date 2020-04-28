@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Influencers Argentina</title>
+  <meta name="description" content="La información de todos los influencers de instagram que tu marca necesita.">
+
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="/style/home.css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+</head>
+
+<body>
+  <div class="hero">
+    <div class="overlay">
+      <h1>Influencers de Argentina</h1>
+      <p>Todos los influencers que tu marca necesita, en un solo lugar</p>
+    </div>
+  </div>
+  <div id="app">
+    <div class="filters">
+      <input v-model="searchQuery" type="text" placeholder="Search...">
+    </div>
+    <div class="table-responsive">
+      <table style="width:100%">
+        <tr>
+          <th>Nombre</th>
+          <th>Username</th>
+          <th>Followers</th>
+          <th>Engagement Rate</th>
+        </tr>
+        <tr v-for="influencer in resultQuery">
+          <td>{{influencer.nombre}}</td>
+          <td><a target="_blank" v-bind:href="influencer.cuenta">{{influencer.username}}</a></td>
+          <td>{{influencer.followers}}</td>
+          <td>{{influencer.engagementRate}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <p class="footer">Built with ❤️ by <a href="ferminrp.com">ferminrp.com</a></p>
+
+  <script src="/scripts/home.js"></script>
+</body>
+
+</html>
