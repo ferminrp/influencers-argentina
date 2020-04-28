@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-http://influencersargentina.netlify.com/* http://influencersargentina.xyz/:splat 301!
