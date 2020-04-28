@@ -10,7 +10,7 @@ new Vue({
     axios
       .get("https://influencersargentina.xyz/data.json")
       .then(response => {
-        this.info = response;
+        this.info = response.data;
       });
   },
   computed: {
