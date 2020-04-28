@@ -8,9 +8,9 @@ new Vue({
   },
   mounted() {
     axios
-      .get("https://influencers-argentina.firebaseio.com/.json")
+      .get("https://influencersargentina.xyz/data.json")
       .then(response => {
-        this.info = response.data;
+        this.info = response;
       });
   },
   computed: {
