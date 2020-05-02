@@ -51,6 +51,32 @@ h1 {
   margin-right: 30px;
 }
 
+.ctas {
+  display: flex;
+  justify-content: space-between;
+  max-width: 704px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.ctas a {
+  display: block;
+  width: 48%;
+  color: white;
+  text-decoration: none;
+  background-color: #6558f5;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 5px;
+}
+
+#opposite {
+  background-color: transparent;
+  border: 1px solid #6558f5;
+  color: #6558f5;
+}
+
 .posts-grid {
   display: flex;
   flex-wrap: wrap;
