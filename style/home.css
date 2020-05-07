@@ -111,3 +111,29 @@ th {
   text-align: center;
   margin: 20px auto 50px auto;
 }
+
+.banner {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  text-shadow: none;
+  color: white;
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.banner input {
+  padding: 2px;
+  width: 200px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .banner {
+    display: none;
+  }
+
+}

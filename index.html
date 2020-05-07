@@ -17,6 +17,13 @@
 </head>
 
 <body>
+  <div class="banner">
+    <form method="POST" data-netlify="true" action="">
+      <p>
+        <label>¿Crees que nos falta alguien? <input placeholder="@leomessi" type="text" name="name" /></label>
+      </p>
+    </form>
+  </div>
   <div class="hero">
     <div class="overlay">
       <h1>Influencers de Argentina</h1>
@@ -37,7 +44,7 @@
         </tr>
         <tr v-for="influencer in resultQuery">
           <td>{{influencer.nombre}}</td>
-          <td><a target="_blank" v-bind:href="'https://influencersargentina.xyz/accounts/'+ influencer.username">{{influencer.username}}</a></td>
+          <td><a target="_blank" v-bind:href="influencer.cuenta">{{influencer.username}}</a></td>
           <td>{{influencer.followers}}</td>
           <td>{{influencer.engagementRate}}</td>
         </tr>
